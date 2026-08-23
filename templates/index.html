@@ -9,6 +9,8 @@
 <input type="submit" value="DONE">
 </form>  
 <h3>Your Note:</h3>
-<p>{{ note }}</p>
+{% for note in notes %}
+    <p>{{ note }}</p>
+{% endfor %}
 </body>
 </html>  
