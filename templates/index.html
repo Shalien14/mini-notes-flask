@@ -11,6 +11,10 @@
 <h3>Your Note:</h3>
 {% for note in notes %}
     <p>{{ note }}</p>
+    <form action="/delete" method="POST">     
+    <input type="hidden" name="id" value="{{ note[0] }}"/>  
+    <input type="submit" value="DELETE">
+    </form>  
 {% endfor %}
 </body>
 </html>  
