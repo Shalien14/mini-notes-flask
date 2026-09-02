@@ -12,16 +12,24 @@ connection.execute("""
 
 connection.commit()
 
+# connection.execute(
+#     "INSERT INTO notes (content) VALUES (?)",
+#     ("My first Flask note",)
+# )
+
+# rows = connection.execute("SELECT * FROM notes").fetchall()
+
 connection.execute(
-    "INSERT INTO notes (content) VALUES (?)",
-    ("My first Flask note",)
+    "UPDATE notes SET content = ? WHERE id = ?",
+    ("Learn Python and Flask", 9)
 )
 
+connection.commit()
 
-connection.execute(
-    "DELETE FROM notes WHERE id = ?",
-    (7,)
-)
+# connection.execute(
+#     "DELETE FROM notes WHERE id = ?",
+#     (7,)
+# )
 
 connection.commit()
 
