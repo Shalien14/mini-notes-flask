@@ -1,0 +1,13 @@
+<html>  
+<head>  
+<title> Mini Notes</title>  
+</head>  
+<body>  
+<h2> MINI NOTES EDIT</h2>  
+<form action="/edit" method="POST">     
+<input type="text" name="note" value="{{ note[1] }}">
+<input type="submit" value="SAVE">
+<input type="hidden" name="id" value="{{ note[0] }}"/>  
+</form>  
+</body>
+</html>  

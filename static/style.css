@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    margin: 0;
+    padding: 40px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    margin-bottom: 5px;
+}
+
+header p {
+    color: #666;
+}
+
+.add-note,
+.notes {
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+.add-note form {
+    display: flex;
+    gap: 10px;
+}
+
+.add-note input[type="text"] {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.add-note input[type="submit"] {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.notes h2 {
+    margin-bottom: 15px;
+}
+
+.note {
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.note-actions {
+    margin-top: 15px;
+    display: flex;
+    gap: 8px;
+}

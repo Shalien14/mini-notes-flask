@@ -48,5 +48,31 @@ def delete():
     connection.close()
 
     return redirect("/")
+
+@app.route("/edit", methods=["GET","POST"])
+def edit():
+    connection = sqlite3.connect("my_notes.db")
+
+    if request.method == "POST":
+        note_id = request.form["id"]
+        new_note = request.form["note"]
+        connection.execute(
+            "UPDATE notes SET content = ? WHERE id = ?",
+            (new_note, note_id)
+        )
+        connection.commit()
+        connection.close()
+        return redirect("/")
+    
+    note_id=request.args["id"]
+    note = connection.execute(
+        "SELECT * FROM notes WHERE id = ?",
+        (note_id,)
+    ).fetchone()
+    connection.close()
+    
+    return render_template("edit.html", note=note)
+    
+
 if __name__=="__main__":
     app.run(debug=True)

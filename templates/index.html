@@ -1,20 +1,36 @@
 <html>  
 <head>  
 <title> Mini Notes</title>  
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>  
 <body>  
-<h2> MINI NOTES </h2>  
-<form action="/" method="POST">     
-<input type="text" name="note" placeholder="Enter your notes here"/>  
-<input type="submit" value="DONE">
-</form>  
-<h3>Your Note:</h3>
-{% for note in notes %}
-    <p>{{ note }}</p>
-    <form action="/delete" method="POST">     
-    <input type="hidden" name="id" value="{{ note[0] }}"/>  
-    <input type="submit" value="DELETE">
+<header>
+    <h1>Mini Notes</h1>
+    <p>Your simple personal notes</p>
+</header>
+<section class="add-note">
+    <form action="/" method="POST">     
+        <input type="text" name="note" placeholder="Enter your notes here"/>  
+        <input type="submit" value="DONE">
     </form>  
-{% endfor %}
+</section>
+<section class="notes">
+    <h2>Your Notes</h2>
+    {% for note in notes %}
+    <div class="note">
+        <p>{{ note[1] }}</p></div>
+        <div class="note-actions">
+                        <form action="/edit" method="GET">     
+                <input type="hidden" name="id" value="{{ note[0] }}"/>  
+                <input type="submit" value="EDIT">
+            </form>  
+            <form action="/delete" method="POST">     
+                <input type="hidden" name="id" value="{{ note[0] }}"/>  
+                <input type="submit" value="DELETE">
+            </form>  
+        </div>
+    {% endfor %}
+    
+</section>
 </body>
 </html>  
