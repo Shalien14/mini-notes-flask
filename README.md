@@ -43,14 +43,15 @@ Users will be able to:
 mini-notes/
 │
 ├── app.py
-├── requirements.txt
 ├── README.md
+├── .gitignore
 │
 ├── templates/
 │   └── index.html
+│   └── edit.html
 │
 ├── static/
 │   └── style.css
 │
 └── instance/
-    └── notes.db
+    └── my_notes.db
