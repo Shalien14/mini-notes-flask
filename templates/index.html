@@ -18,17 +18,18 @@
     <h2>Your Notes</h2>
     {% for note in notes %}
     <div class="note">
-        <p>{{ note[1] }}</p></div>
+        <p>{{ note[1] }}</p>
         <div class="note-actions">
-                        <form action="/edit" method="GET">     
+            <form action="/edit" method="GET" class="edit-form">    
                 <input type="hidden" name="id" value="{{ note[0] }}"/>  
                 <input type="submit" value="EDIT">
-            </form>  
-            <form action="/delete" method="POST">     
+            </form>
+            <form action="/delete" method="POST" class="delete-form">     
                 <input type="hidden" name="id" value="{{ note[0] }}"/>  
                 <input type="submit" value="DELETE">
             </form>  
         </div>
+    </div>
     {% endfor %}
     
 </section>

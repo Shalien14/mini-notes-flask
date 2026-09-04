@@ -1,13 +1,18 @@
 <html>  
 <head>  
 <title> Mini Notes</title>  
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>  
 <body>  
-<h2> MINI NOTES EDIT</h2>  
-<form action="/edit" method="POST">     
-<input type="text" name="note" value="{{ note[1] }}">
-<input type="submit" value="SAVE">
-<input type="hidden" name="id" value="{{ note[0] }}"/>  
-</form>  
+<body>
+    <div class="edit-page">
+        <h1>Edit Note</h1>
+        <p>Update your note below</p> 
+        <form action="/edit" method="POST">     
+            <input type="text" name="note" value="{{ note[1] }}" class="edit-input">
+            <input type="submit" value="SAVE">
+            <input type="hidden" name="id" value="{{ note[0] }}"/>  
+        </form>  
+    </div>
 </body>
 </html>  
