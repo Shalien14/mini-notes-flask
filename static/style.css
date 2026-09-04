@@ -1,6 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-    background: #f4f6f8;
+    background: #eaeeff;
+    color: #0b1829;
     margin: 0;
     padding: 40px;
 }
@@ -12,6 +13,7 @@ header {
 
 header h1 {
     margin-bottom: 5px;
+    color: #4f46e5;
 }
 
 header p {
@@ -37,10 +39,17 @@ header p {
 }
 
 .add-note input[type="submit"] {
-    padding: 12px 20px;
+    background: #6366f1;
+    color: white;
     border: none;
-    border-radius: 6px;
+    padding: 12px 22px;
+    border-radius: 8px;
     cursor: pointer;
+    font-weight: 600;
+}
+
+.add-note input[type="submit"]:hover {
+    background: #4f46e5;
 }
 
 .notes h2 {
@@ -49,13 +58,91 @@ header p {
 
 .note {
     background: white;
-    padding: 20px;
+    padding: 22px;
     margin-bottom: 15px;
     border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .note-actions {
-    margin-top: 15px;
+    margin-top: 18px;
     display: flex;
     gap: 8px;
+}
+
+.edit-form input[type="submit"] {
+    background: #eef2ff;
+    color: #4f46e5;
+    border: 1px solid #c7d2fe;
+    padding: 7px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.edit-form input[type="submit"]:hover {
+    background: #6366f1;
+    color: white;
+}
+
+.delete-form input[type="submit"] {
+    background: #fff1f2;
+    color: #e11d48;
+    border: 1px solid #fecdd3;
+    padding: 7px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.delete-form input[type="submit"]:hover {
+    background: #e11d48;
+    color: white;
+}
+
+.edit-page {
+    max-width: 700px;
+    margin: 80px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.edit-page h1 {
+    color: #4f46e5;
+    margin-bottom: 5px;
+}
+
+.edit-page p {
+    color: #666;
+}
+
+.edit-input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #c7d2fe;
+    border-radius: 6px;
+    margin: 15px 0;
+    font-size: 16px;
+}
+
+.edit-input:focus {
+    outline: none;
+    border-color: #6366f1;
+}
+
+.edit-page input[type="submit"] {
+    background: #6366f1;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.edit-page input[type="submit"]:hover {
+    background: #4f46e5;
 }
